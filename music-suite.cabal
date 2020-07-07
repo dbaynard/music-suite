@@ -1,3 +1,10 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 5d2559ce9d21451565d8cc80c0dbcf61eef9ebfb8b17af793349a20618be064a
 
 name:                   music-suite
 version:                2.0.0
@@ -7,574 +14,1069 @@ license:                BSD3
 license-file:           COPYING
 synopsis:               A set of libraries for composition, analysis and manipulation of music.
 category:               Music
-tested-with:            GHC
+tested-with:            GHC-ANY
 build-type:             Simple
-cabal-version:          >= 1.10
-
-description:
-    See <http://music-suite.github.io>.
-
-extra-source-files:     README.md,
-                        examples/*.hs,
-                        examples/*.scm
-                        data/*.ly
+description:            See <http://music-suite.github.io>.
+extra-source-files:
+    README.md
+    examples/analysis.hs
+    examples/AnalysisDurations.hs
+    examples/annotations.hs
+    examples/bartok.hs
+    examples/behavior.hs
+    examples/canon.hs
+    examples/chopin.hs
+    examples/chorale.hs
+    examples/chords.hs
+    examples/duo.hs
+    examples/dynamics.hs
+    examples/fugue1.hs
+    examples/HarpStringTexture.hs
+    examples/hello.hs
+    examples/klangfarben.hs
+    examples/MenacingBass.hs
+    examples/mozart.hs
+    examples/new.hs
+    examples/part.hs
+    examples/phrases.hs
+    examples/piano1.hs
+    examples/piano2.hs
+    examples/piano3.hs
+    examples/sky.hs
+    examples/StudyForHarp.hs
+    examples/TimeSignatures.hs
+    examples/trio.hs
+    examples/tuplet.hs
+    examples/Voicing.hs
+    data/ly_big_score.ly
+    data/ly_inline.ly
+    data/ly_inline_test1.ly
+    data/ly_inline_test2.ly
+    data/ly_score.ly
 
 source-repository head
-    type:             	git
-    location:         	git://github.com/music-suite/music-suite.git
+    type: git
+    location: git://github.com/music-suite/music-suite.git
 
 library
-    build-depends:      base,
-                        lens,
-                        text,
-                        split,
-                        containers,
-                        comonad,
-                        streams,
-                        vector-space,
-                        process,
-                        filepath,
-                        optparse-applicative,
-                        average,
-                        semigroups,
-                        monadplus,
-                        transformers,
-                        unordered-containers,
-                        base-orphans,
-                        data-default,
-                        file-embed,
-                        aeson,
-                        roman-numerals,
-                        bytestring,
-                        cassava,
-                        mtl,
-                        contravariant,
-                        base-prelude,
-                        NumInstances,
-                        MonadRandom,
-                        colour,
-                        iso-deriving,
-                        logict,
-                        parsec,
-                        directory,
-                        prettify,
-                        HCodecs,
-                        data-interval,
-                        positive,
-                        type-unary,
-                        xml,
-                        random,
-                        neat-interpolation,
-                        modular-arithmetic,
-                        random-shuffle
-    if !os(windows)
-      build-depends:    unix
+    exposed-modules:
+        Music.Articulation
+        Music.Dynamics
+        Music.Dynamics.Absolute
+        Music.Dynamics.Common
+        Music.Dynamics.Balance
+        Music.Dynamics.Literal
+        Data.Semigroup.Option.Instances
+        Music.Parts
+        Music.Parts.Division
+        Music.Parts.Subpart
+        Music.Parts.Solo
+        Music.Parts.Part
+        Music.Parts.Group
+        Music.Parts.Instrument
+        Music.Parts.Instrument.Strings
+        Music.Parts.Instrument.Woodwind
+        Music.Parts.Instrument.Brass
+        Music.Parts.Instrument.Percussion
+        Music.Parts.Instrument.Keyboard
+        Music.Parts.Instrument.Vocal
+        Music.Parts.Internal.Data
+        Music.Pitch.Absolute
+        Data.Music.Lilypond
+        Data.Music.Lilypond.Dynamics
+        Data.Music.Lilypond.Pitch
+        Data.Music.Lilypond.Value
+        Data.Music.MusicXml
+        Data.Music.MusicXml.Dynamics
+        Data.Music.MusicXml.Pitch
+        Data.Music.MusicXml.Read
+        Data.Music.MusicXml.Score
+        Data.Music.MusicXml.Simple
+        Data.Music.MusicXml.Time
+        Data.Music.MusicXml.Write
+        Music.Pitch
+        Music.Pitch.Equal
+        Music.Pitch.Common
+        Music.Pitch.Common.Types
+        Music.Pitch.Common.Internal
+        Music.Pitch.Common.Quality
+        Music.Pitch.Common.Number
+        Music.Pitch.Common.Interval
+        Music.Pitch.Common.Pitch
+        Music.Pitch.Common.Semitones
+        Music.Pitch.Common.Spell
+        Music.Pitch.Common.Harmony
+        Music.Pitch.Common.Names
+        Music.Pitch.Ambitus
+        Music.Pitch.Scale
+        Music.Pitch.Clef
+        Music.Pitch.Intonation
+        Music.Pitch.Literal
+        Music.Pitch.Literal.Pitch
+        Music.Pitch.Literal.Interval
+        Music.Pitch.Augmentable
+        Music.Pitch.Alterable
+        Data.AffineSpace.Point.Offsets
+        Data.Functor.Couple
+        Data.Functor.Context
+        Data.Functor.Rep.Lens
+        Data.Semigroup.Instances
+        Control.Monad.Compose
+        Music.Time
+        Music.Time.Types
+        Music.Time.Transform
+        Music.Time.Duration
+        Music.Time.Position
+        Music.Time.Split
+        Music.Time.Juxtapose
+        Music.Time.Rest
+        Music.Time.Aligned
+        Music.Time.Note
+        Music.Time.Placed
+        Music.Time.Event
+        Music.Time.Track
+        Music.Time.Voice
+        Music.Time.Score
+        Music.Time.Pattern
+        Music.Time.Behavior
+        Music.Time.Reactive
+        Music.Time.Meta
+        Music.Score
+        Music.Score.Ties
+        Music.Score.Part
+        Music.Score.Phrases
+        Music.Score.Meta
+        Music.Score.Meta.Annotations
+        Music.Score.Meta.Attribution
+        Music.Score.Meta.Barline
+        Music.Score.Meta.Clef
+        Music.Score.Meta.Fermata
+        Music.Score.Meta.Key
+        Music.Score.Meta.RehearsalMark
+        Music.Score.Meta.Tempo
+        Music.Score.Meta.Time
+        Music.Score.Meta.Title
+        Music.Score.Export.Meta
+        Music.Score.Pitch
+        Music.Score.Articulation
+        Music.Score.Dynamics
+        Music.Score.Technique
+        Music.Score.Slide
+        Music.Score.Tremolo
+        Music.Score.StaffNumber
+        Music.Score.Text
+        Music.Score.Harmonics
+        Music.Score.Color
+        Music.Score.Export.ArticulationNotation
+        Music.Score.Export.TechniqueNotation
+        Music.Score.Export.DynamicNotation
+        Music.Score.Export.StandardNotation
+        Music.Score.Import.Abc
+        Music.Score.Import.Lilypond
+        Music.Score.Import.Midi
+        Music.Time.Internal.Convert
+        Music.Time.Internal.Util
+        Music.Time.Internal.Transform
+        Music.Score.Internal.Quantize
+        Music.Score.Internal.VoiceSeparation
+        Music.Score.Internal.Instances
+        Music.Score.Internal.Util
+        Music.Score.Internal.Export
+        Music.Time.Internal.Preliminaries
+        Data.Music.Sibelius
+        Data.AffineSpace.Point
+        Music.Score.Import.Sibelius
+        Music.Prelude
+        Music.Prelude.Standard
+        Music.Prelude.Inspectable
+    other-modules:
+        Data.Music.Lilypond.Rhythms
+        Music.Pitch.Tokawa
+        Paths_music_suite
+    hs-source-dirs:
+        src
+        vendor
+    default-extensions: ConstraintKinds DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveTraversable GeneralizedNewtypeDeriving MultiParamTypeClasses NoMonomorphismRestriction RankNTypes StandaloneDeriving TupleSections TypeFamilies TypeOperators TypeApplications ViewPatterns OverloadedStrings
+    ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wno-unused-top-binds -Wno-name-shadowing
+    build-depends:
+        HCodecs,
+        MonadRandom,
+        NumInstances,
+        aeson,
+        average,
+        base,
+        base-orphans,
+        base-prelude,
+        bytestring,
+        cassava,
+        colour,
+        comonad,
+        containers,
+        contravariant,
+        data-default,
+        data-interval,
+        directory,
+        file-embed,
+        filepath,
+        iso-deriving,
+        lens,
+        logict,
+        modular-arithmetic,
+        monadplus,
+        mtl,
+        neat-interpolation,
+        optparse-applicative,
+        parsec,
+        positive,
+        prettify,
+        process,
+        random,
+        random-shuffle,
+        roman-numerals,
+        semigroups,
+        split,
+        streams,
+        text,
+        transformers,
+        type-unary,
+        unordered-containers,
+        vector-space,
+        xml
+    if !(os(windows))
+        build-depends:
+            unix
+    default-language: Haskell2010
 
-    exposed-modules:    Music.Articulation
-                        Music.Dynamics
-                        Music.Dynamics.Absolute
-                        Music.Dynamics.Common
-                        Music.Dynamics.Balance
-                        Music.Dynamics.Literal
-                        Data.Semigroup.Option.Instances
-                        Music.Parts
-                        Music.Parts.Division
-                        Music.Parts.Subpart
-                        Music.Parts.Solo
-                        Music.Parts.Part
-                        Music.Parts.Group
-                        Music.Parts.Instrument
-                        Music.Parts.Instrument.Strings
-                        Music.Parts.Instrument.Woodwind
-                        Music.Parts.Instrument.Brass
-                        Music.Parts.Instrument.Percussion
-                        Music.Parts.Instrument.Keyboard
-                        Music.Parts.Instrument.Vocal
-                        Music.Parts.Internal.Data
-                        Music.Pitch.Absolute
-                        Data.Music.Lilypond
-                        Data.Music.Lilypond.Dynamics
-                        Data.Music.Lilypond.Pitch
-                        Data.Music.Lilypond.Value
-                        Data.Music.MusicXml
-                        Data.Music.MusicXml.Dynamics
-                        Data.Music.MusicXml.Pitch
-                        Data.Music.MusicXml.Read
-                        Data.Music.MusicXml.Score
-                        Data.Music.MusicXml.Simple
-                        Data.Music.MusicXml.Time
-                        Data.Music.MusicXml.Write
-                        Music.Pitch
-                        Music.Pitch.Equal
-                        Music.Pitch.Common
-                        Music.Pitch.Common.Types
-                        Music.Pitch.Common.Internal
-                        Music.Pitch.Common.Quality
-                        Music.Pitch.Common.Number
-                        Music.Pitch.Common.Interval
-                        Music.Pitch.Common.Pitch
-                        Music.Pitch.Common.Semitones
-                        Music.Pitch.Common.Spell
-                        Music.Pitch.Common.Harmony
-                        Music.Pitch.Common.Names
-                        Music.Pitch.Ambitus
-                        Music.Pitch.Scale
-                        Music.Pitch.Clef
-                        Music.Pitch.Intonation
-                        Music.Pitch.Literal
-                        Music.Pitch.Literal.Pitch
-                        Music.Pitch.Literal.Interval
-                        Music.Pitch.Augmentable
-                        Music.Pitch.Alterable
-                        Data.AffineSpace.Point.Offsets
-                        Data.Functor.Couple
-                        Data.Functor.Context
-                        Data.Functor.Rep.Lens
-                        Data.Semigroup.Instances
-                        Control.Monad.Compose
-                        Music.Time
-                        Music.Time.Types
-                        Music.Time.Transform
-                        Music.Time.Duration
-                        Music.Time.Position
-                        Music.Time.Split
-                        Music.Time.Juxtapose
-                        Music.Time.Rest
-                        Music.Time.Aligned
-                        Music.Time.Note
-                        Music.Time.Placed
-                        Music.Time.Event
-                        Music.Time.Track
-                        Music.Time.Voice
-                        Music.Time.Score
-                        Music.Time.Pattern
-                        Music.Time.Behavior
-                        Music.Time.Reactive
-                        Music.Time.Meta
-                        Music.Score
-                        Music.Score.Ties
-                        Music.Score.Part
-                        Music.Score.Phrases
-                        Music.Score.Meta
-                        Music.Score.Meta.Annotations
-                        Music.Score.Meta.Attribution
-                        Music.Score.Meta.Barline
-                        Music.Score.Meta.Clef
-                        Music.Score.Meta.Fermata
-                        Music.Score.Meta.Key
-                        Music.Score.Meta.RehearsalMark
-                        Music.Score.Meta.Tempo
-                        Music.Score.Meta.Time
-                        Music.Score.Meta.Title
-                        Music.Score.Export.Meta
-                        Music.Score.Pitch
-                        Music.Score.Articulation
-                        Music.Score.Dynamics
-                        Music.Score.Technique
-                        Music.Score.Slide
-                        Music.Score.Tremolo
-                        Music.Score.StaffNumber
-                        Music.Score.Text
-                        Music.Score.Harmonics
-                        Music.Score.Color
-                        Music.Score.Export.ArticulationNotation
-                        Music.Score.Export.TechniqueNotation
-                        Music.Score.Export.DynamicNotation
-                        Music.Score.Export.StandardNotation
-                        Music.Score.Import.Abc
-                        Music.Score.Import.Lilypond
-                        Music.Score.Import.Midi
-                        Music.Time.Internal.Convert
-                        Music.Time.Internal.Util
-                        Music.Time.Internal.Transform
-                        Music.Score.Internal.Quantize
-                        Music.Score.Internal.VoiceSeparation
-                        Music.Score.Internal.Instances
-                        Music.Score.Internal.Util
-                        Music.Score.Internal.Export
-                        Music.Time.Internal.Preliminaries
-                        Data.Music.Sibelius
-                        Data.AffineSpace.Point
-                        Music.Score.Import.Sibelius
-                        Music.Prelude
-                        Music.Prelude.Standard
-                        Music.Prelude.Inspectable
-    hs-source-dirs:     src, vendor
-    default-language:   Haskell2010
-    default-extensions: ConstraintKinds,
-                        DeriveDataTypeable,
-                        DeriveFoldable,
-                        DeriveFunctor,
-                        DeriveTraversable,
-                        GeneralizedNewtypeDeriving,
-                        MultiParamTypeClasses,
-                        NoMonomorphismRestriction,
-                        RankNTypes,
-                        StandaloneDeriving,
-                        TupleSections,
-                        TypeFamilies,
-                        TypeOperators,
-                        TypeApplications,
-                        ViewPatterns,
-                        OverloadedStrings
-  ghc-options:
-    -Wall
-    -Wcompat
-    -Wincomplete-record-updates
-    -Wincomplete-uni-patterns
-    -Wredundant-constraints
-    -Wno-unused-top-binds
-    -Wno-name-shadowing
-    -- TODO: -Werror
+executable music-suite-examples-ambitus
+    main-is: Score.hs
+    other-modules:
+        Paths_music_suite
+    hs-source-dirs:
+        examples/pieces/Ambitus
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-test-suite "music-suite-test-umts"
-    build-depends:      base,
-                        aeson,
-                        average,
-                        base-orphans,
-                        base-prelude,
-                        bytestring,
-                        cassava,
-                        colour,
-                        comonad,
-                        containers,
-                        contravariant,
-                        data-default,
-                        data-interval,
-                        directory,
-                        file-embed,
-                        filepath,
-                        HCodecs,
-                        lens,
-                        logict,
-                        modular-arithmetic,
-                        monadplus,
-                        MonadRandom,
-                        mtl,
-                        neat-interpolation,
-                        NumInstances,
-                        optparse-applicative,
-                        parsec,
-                        positive,
-                        prettify,
-                        process,
-                        QuickCheck,
-                        random,
-                        roman-numerals,
-                        semigroups,
-                        split,
-                        streams,
-                        tasty,
-                        tasty-golden,
-                        tasty-quickcheck,
-                        text,
-                        transformers,
-                        type-unary,
-                        unordered-containers,
-                        vector-space,
-                        xml,
-                        music-suite
-    main-is:            UMTS.hs
-    type:               exitcode-stdio-1.0
-    hs-source-dirs:     test
-    default-language:   Haskell2010
+executable music-suite-examples-analysis
+    main-is: analysis.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-test-suite "music-suite-test-laws"
-    build-depends:      base,
-                        tasty,
-                        tasty-golden,
-                        tasty-quickcheck-laws,
-                        process,
-                        average,
-                        containers,
-                        tasty-quickcheck,
-                        QuickCheck,
-                        semigroups,
-                        comonad,
-                        music-suite
-    type:               exitcode-stdio-1.0
-    main-is:            Laws.hs
-    hs-source-dirs:     test
-    default-language:   Haskell2010
+executable music-suite-examples-analysis-durations
+    main-is: AnalysisDurations.hs
+    other-modules:
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-test-suite "music-suite-test-xml-parser"
-    build-depends:      base,
-                        bytestring,
-                        text,
-                        music-suite,
-                        tasty,
-                        tasty-hunit,
-                        directory,
-                        filepath
-    type:               exitcode-stdio-1.0
-    main-is:            MusicXmlParser.hs
-    hs-source-dirs:     test
-    default-language:   Haskell2010
+executable music-suite-examples-annotations
+    main-is: annotations.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
--- Examples:
+executable music-suite-examples-bartok
+    main-is: bartok.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-analysis"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            analysis.hs
+executable music-suite-examples-behavior
+    main-is: behavior.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-analysis-durations"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            AnalysisDurations.hs
+executable music-suite-examples-brass-large-ensemble
+    main-is: Score.hs
+    other-modules:
+        Paths_music_suite
+    hs-source-dirs:
+        examples/pieces/BrassLargeEnsemble
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-annotations"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            annotations.hs
+executable music-suite-examples-canon
+    main-is: canon.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-bartok"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            bartok.hs
+executable music-suite-examples-chopin
+    main-is: chopin.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-behavior"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            behavior.hs
+executable music-suite-examples-chorale
+    main-is: chorale.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-canon"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            canon.hs
+executable music-suite-examples-chords
+    main-is: chords.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-chopin"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            chopin.hs
+executable music-suite-examples-duo
+    main-is: duo.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-duo"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            duo.hs
+executable music-suite-examples-dynamics
+    main-is: dynamics.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-chords"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            chords.hs
+executable music-suite-examples-fugue1
+    main-is: fugue1.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-fugue1"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            fugue1.hs
+executable music-suite-examples-harp-string-texture
+    main-is: HarpStringTexture.hs
+    other-modules:
+        AnalysisDurations
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-mozart"
-    build-depends:      base,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            mozart.hs
+executable music-suite-examples-hello
+    main-is: hello.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-part"
-    build-depends:      base,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            part.hs
+executable music-suite-examples-klangfarben
+    main-is: klangfarben.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-phrases"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            phrases.hs
+executable music-suite-examples-mozart
+    main-is: mozart.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-hello"
-    build-depends:      base,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            hello.hs
+executable music-suite-examples-part
+    main-is: part.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-study-for-harp"
-    build-depends:      base,
-                        lens,
-                        containers,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            StudyForHarp.hs
+executable music-suite-examples-phrases
+    main-is: phrases.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-time-signatures"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            TimeSignatures.hs
+executable music-suite-examples-piano1
+    main-is: piano1.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-dynamics"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            dynamics.hs
+executable music-suite-examples-piano2
+    main-is: piano2.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-trio"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            trio.hs
+executable music-suite-examples-piece3
+    main-is: Piece3.hs
+    other-modules:
+        Ambitus.Score
+        BrassChords.Score
+        BrassLargeEnsemble.Score
+        Canons.Score
+        CrawfordSeeger.Score
+        Exaudi
+        Exaudi2
+        FixedPitches.Score
+        Floaters.Score
+        Fugue.Score
+        HarmonyToTexture.Score
+        HarmonyTriads.Score
+        HarmPhasing.Score
+        Holst.Score
+        LargeScalePolyrhythm.Score
+        Murail
+        Ostinati.Score
+        Piece1
+        Piece10
+        Piece11
+        Piece12
+        Piece2
+        Piece2.BrassFloaters
+        Piece5
+        Piece6
+        Piece7
+        Piece8
+        Piece9
+        PopChords.Score
+        PopRhythms.Score
+        SalientMelodicTransformations.Score
+        SustainPunctuated.Score
+        TreeOfRhythms.Score
+        Util
+        VlaPno.Score
+        WindsPhrasing.Score
+        Z_ChordSpaces.Score
+        Z_ChordToTexture.Score
+        Z_FloatersScales.Score
+        Z_HarmonicElaborations.Score
+        Z_MelodicContour.Score
+        Z_SampleReactive.Score
+        Z_Shepherd.Score
+        Paths_music_suite
+    hs-source-dirs:
+        examples/pieces
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-tuplet"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            tuplet.hs
+executable music-suite-examples-piece8
+    main-is: Piece8.hs
+    other-modules:
+        Ambitus.Score
+        BrassChords.Score
+        BrassLargeEnsemble.Score
+        Canons.Score
+        CrawfordSeeger.Score
+        Exaudi
+        Exaudi2
+        FixedPitches.Score
+        Floaters.Score
+        Fugue.Score
+        HarmonyToTexture.Score
+        HarmonyTriads.Score
+        HarmPhasing.Score
+        Holst.Score
+        LargeScalePolyrhythm.Score
+        Murail
+        Ostinati.Score
+        Piece1
+        Piece10
+        Piece11
+        Piece12
+        Piece2
+        Piece2.BrassFloaters
+        Piece3
+        Piece5
+        Piece6
+        Piece7
+        Piece9
+        PopChords.Score
+        PopRhythms.Score
+        SalientMelodicTransformations.Score
+        SustainPunctuated.Score
+        TreeOfRhythms.Score
+        Util
+        VlaPno.Score
+        WindsPhrasing.Score
+        Z_ChordSpaces.Score
+        Z_ChordToTexture.Score
+        Z_FloatersScales.Score
+        Z_HarmonicElaborations.Score
+        Z_MelodicContour.Score
+        Z_SampleReactive.Score
+        Z_Shepherd.Score
+        Paths_music_suite
+    hs-source-dirs:
+        examples/pieces
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-klangfarben"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            klangfarben.hs
+executable music-suite-examples-salient-melodic-transformations
+    main-is: Score.hs
+    other-modules:
+        Paths_music_suite
+    hs-source-dirs:
+        examples/pieces/SalientMelodicTransformations
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-chorale"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            chorale.hs
+executable music-suite-examples-study-for-harp
+    main-is: StudyForHarp.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-piano1"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            piano1.hs
-executable "music-suite-examples-piano2"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            piano2.hs
-executable "music-suite-examples-harp-string-texture"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples
-    ghc-options:        -fno-code
-    main-is:            HarpStringTexture.hs
+executable music-suite-examples-sustain-punctuated
+    main-is: Score.hs
+    other-modules:
+        Paths_music_suite
+    hs-source-dirs:
+        examples/pieces/SustainPunctuated
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
--- executable "music-suite-examples-piece1"
---     build-depends:      base,
---                         lens,
---                         music-suite
---     hs-source-dirs:     examples/pieces
---     main-is:            Piece1.hs
+executable music-suite-examples-time-signatures
+    main-is: TimeSignatures.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-piece3"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples/pieces
-    ghc-options:        -fno-code
-    main-is:            Piece3.hs
+executable music-suite-examples-trio
+    main-is: trio.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-ambitus"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples/pieces/Ambitus
-    ghc-options:        -fno-code
-    main-is:            Score.hs
+executable music-suite-examples-tuplet
+    main-is: tuplet.hs
+    other-modules:
+        AnalysisDurations
+        HarpStringTexture
+        MenacingBass
+        StudyForHarp
+        TimeSignatures
+        Voicing
+        Paths_music_suite
+    hs-source-dirs:
+        examples
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-winds-phrasing"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples/pieces/WindsPhrasing
-    ghc-options:        -fno-code
-    main-is:            Score.hs
+executable music-suite-examples-winds-phrasing
+    main-is: Score.hs
+    other-modules:
+        Paths_music_suite
+    hs-source-dirs:
+        examples/pieces/WindsPhrasing
+    ghc-options: -fno-code
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-sustain-punctuated"
-    build-depends:      base,
-                        lens,
-                        music-suite
-    hs-source-dirs:     examples/pieces/SustainPunctuated
-    ghc-options:        -fno-code
-    main-is:            Score.hs
+test-suite music-suite-test-laws
+    type: exitcode-stdio-1.0
+    main-is: Laws.hs
+    other-modules:
+        Basic
+        MusicXmlParser
+        UMTS
+        Paths_music_suite
+    hs-source-dirs:
+        test
+    build-depends:
+        QuickCheck,
+        average,
+        base,
+        comonad,
+        containers,
+        lens,
+        music-suite,
+        process,
+        random,
+        semigroups,
+        tasty,
+        tasty-golden,
+        tasty-quickcheck,
+        tasty-quickcheck-laws,
+        vector-space
+    default-language: Haskell2010
 
-executable "music-suite-examples-piece8"
-    build-depends:      base,
-                        lens,
-                        containers,
-                        vector-space,
-                        music-suite
-    hs-source-dirs:     examples/pieces
-    ghc-options:        -fno-code
-    main-is:            Piece8.hs
+test-suite music-suite-test-umts
+    type: exitcode-stdio-1.0
+    main-is: UMTS.hs
+    other-modules:
+        Basic
+        Laws
+        MusicXmlParser
+        Paths_music_suite
+    hs-source-dirs:
+        test
+    build-depends:
+        HCodecs,
+        MonadRandom,
+        NumInstances,
+        QuickCheck,
+        aeson,
+        average,
+        base,
+        base-orphans,
+        base-prelude,
+        bytestring,
+        cassava,
+        colour,
+        comonad,
+        containers,
+        contravariant,
+        data-default,
+        data-interval,
+        directory,
+        file-embed,
+        filepath,
+        lens,
+        logict,
+        modular-arithmetic,
+        monadplus,
+        mtl,
+        music-suite,
+        neat-interpolation,
+        optparse-applicative,
+        parsec,
+        positive,
+        prettify,
+        process,
+        random,
+        roman-numerals,
+        semigroups,
+        split,
+        streams,
+        tasty,
+        tasty-golden,
+        tasty-quickcheck,
+        text,
+        transformers,
+        type-unary,
+        unordered-containers,
+        vector-space,
+        xml
+    default-language: Haskell2010
 
-executable "music-suite-examples-brass-large-ensemble"
-    build-depends:      base,
-                        lens,
-                        containers,
-                        random,
-                        music-suite
-    hs-source-dirs:     examples/pieces/BrassLargeEnsemble
-    ghc-options:        -fno-code
-    main-is:            Score.hs
-
-executable "music-suite-examples-salient-melodic-transformations"
-    build-depends:      base,
-                        lens,
-                        containers,
-                        random,
-                        music-suite
-    hs-source-dirs:     examples/pieces/SalientMelodicTransformations
-    ghc-options:        -fno-code
-    main-is:            Score.hs
-
-
--- TODO CrawfordSeeger
--- TODO Floaters
--- TODO HarmonyToTexture
--- TODO HarmonyTriads
--- TODO HarmPhasing
--- TODO PianoChords
--- TODO PopRhythms
+test-suite music-suite-test-xml-parser
+    type: exitcode-stdio-1.0
+    main-is: MusicXmlParser.hs
+    other-modules:
+        Basic
+        Laws
+        UMTS
+        Paths_music_suite
+    hs-source-dirs:
+        test
+    build-depends:
+        base,
+        bytestring,
+        containers,
+        directory,
+        filepath,
+        lens,
+        music-suite,
+        random,
+        tasty,
+        tasty-hunit,
+        text,
+        vector-space
+    default-language: Haskell2010
