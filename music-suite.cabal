@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5d2559ce9d21451565d8cc80c0dbcf61eef9ebfb8b17af793349a20618be064a
+-- hash: 65366b7d0cb78db07650dc6912d12f8d1dca196c5c0a5e02685e040fa8a71ccd
 
 name:                   music-suite
 version:                2.0.0
@@ -14,7 +14,7 @@ license:                BSD3
 license-file:           COPYING
 synopsis:               A set of libraries for composition, analysis and manipulation of music.
 category:               Music
-tested-with:            GHC-ANY
+tested-with:            GHC-any
 build-type:             Simple
 description:            See <http://music-suite.github.io>.
 extra-source-files:

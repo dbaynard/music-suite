@@ -8,7 +8,7 @@ maintainer: Hans Hoglund <info@hanshoglund.com>
 license: BSD3
 license-file: COPYING
 git: git://github.com/music-suite/music-suite.git
-tested-with: GHC-ANY
+tested-with: GHC-any
 extra-source-files:
 - README.md
 - examples/*.hs
