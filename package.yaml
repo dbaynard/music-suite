@@ -1,0 +1,482 @@
+name: music-suite
+version: '2.0.0'
+synopsis: A set of libraries for composition, analysis and manipulation of music.
+description: See <http://music-suite.github.io>.
+category: Music
+author: Hans Hoglund
+maintainer: Hans Hoglund <info@hanshoglund.com>
+license: BSD3
+license-file: COPYING
+git: git://github.com/music-suite/music-suite.git
+tested-with: GHC-ANY
+extra-source-files:
+- README.md
+- examples/*.hs
+- examples/*.scm
+- data/*.ly
+dependencies:
+- base
+- lens
+- containers
+- vector-space
+- random
+library:
+  source-dirs:
+  - src
+  - vendor
+  default-extensions:
+  - ConstraintKinds
+  - DeriveDataTypeable
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveTraversable
+  - GeneralizedNewtypeDeriving
+  - MultiParamTypeClasses
+  - NoMonomorphismRestriction
+  - RankNTypes
+  - StandaloneDeriving
+  - TupleSections
+  - TypeFamilies
+  - TypeOperators
+  - TypeApplications
+  - ViewPatterns
+  - OverloadedStrings
+  ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -Wno-unused-top-binds
+  - -Wno-name-shadowing
+  exposed-modules:
+  - Music.Articulation
+  - Music.Dynamics
+  - Music.Dynamics.Absolute
+  - Music.Dynamics.Common
+  - Music.Dynamics.Balance
+  - Music.Dynamics.Literal
+  - Data.Semigroup.Option.Instances
+  - Music.Parts
+  - Music.Parts.Division
+  - Music.Parts.Subpart
+  - Music.Parts.Solo
+  - Music.Parts.Part
+  - Music.Parts.Group
+  - Music.Parts.Instrument
+  - Music.Parts.Instrument.Strings
+  - Music.Parts.Instrument.Woodwind
+  - Music.Parts.Instrument.Brass
+  - Music.Parts.Instrument.Percussion
+  - Music.Parts.Instrument.Keyboard
+  - Music.Parts.Instrument.Vocal
+  - Music.Parts.Internal.Data
+  - Music.Pitch.Absolute
+  - Data.Music.Lilypond
+  - Data.Music.Lilypond.Dynamics
+  - Data.Music.Lilypond.Pitch
+  - Data.Music.Lilypond.Value
+  - Data.Music.MusicXml
+  - Data.Music.MusicXml.Dynamics
+  - Data.Music.MusicXml.Pitch
+  - Data.Music.MusicXml.Read
+  - Data.Music.MusicXml.Score
+  - Data.Music.MusicXml.Simple
+  - Data.Music.MusicXml.Time
+  - Data.Music.MusicXml.Write
+  - Music.Pitch
+  - Music.Pitch.Equal
+  - Music.Pitch.Common
+  - Music.Pitch.Common.Types
+  - Music.Pitch.Common.Internal
+  - Music.Pitch.Common.Quality
+  - Music.Pitch.Common.Number
+  - Music.Pitch.Common.Interval
+  - Music.Pitch.Common.Pitch
+  - Music.Pitch.Common.Semitones
+  - Music.Pitch.Common.Spell
+  - Music.Pitch.Common.Harmony
+  - Music.Pitch.Common.Names
+  - Music.Pitch.Ambitus
+  - Music.Pitch.Scale
+  - Music.Pitch.Clef
+  - Music.Pitch.Intonation
+  - Music.Pitch.Literal
+  - Music.Pitch.Literal.Pitch
+  - Music.Pitch.Literal.Interval
+  - Music.Pitch.Augmentable
+  - Music.Pitch.Alterable
+  - Data.AffineSpace.Point.Offsets
+  - Data.Functor.Couple
+  - Data.Functor.Context
+  - Data.Functor.Rep.Lens
+  - Data.Semigroup.Instances
+  - Control.Monad.Compose
+  - Music.Time
+  - Music.Time.Types
+  - Music.Time.Transform
+  - Music.Time.Duration
+  - Music.Time.Position
+  - Music.Time.Split
+  - Music.Time.Juxtapose
+  - Music.Time.Rest
+  - Music.Time.Aligned
+  - Music.Time.Note
+  - Music.Time.Placed
+  - Music.Time.Event
+  - Music.Time.Track
+  - Music.Time.Voice
+  - Music.Time.Score
+  - Music.Time.Pattern
+  - Music.Time.Behavior
+  - Music.Time.Reactive
+  - Music.Time.Meta
+  - Music.Score
+  - Music.Score.Ties
+  - Music.Score.Part
+  - Music.Score.Phrases
+  - Music.Score.Meta
+  - Music.Score.Meta.Annotations
+  - Music.Score.Meta.Attribution
+  - Music.Score.Meta.Barline
+  - Music.Score.Meta.Clef
+  - Music.Score.Meta.Fermata
+  - Music.Score.Meta.Key
+  - Music.Score.Meta.RehearsalMark
+  - Music.Score.Meta.Tempo
+  - Music.Score.Meta.Time
+  - Music.Score.Meta.Title
+  - Music.Score.Export.Meta
+  - Music.Score.Pitch
+  - Music.Score.Articulation
+  - Music.Score.Dynamics
+  - Music.Score.Technique
+  - Music.Score.Slide
+  - Music.Score.Tremolo
+  - Music.Score.StaffNumber
+  - Music.Score.Text
+  - Music.Score.Harmonics
+  - Music.Score.Color
+  - Music.Score.Export.ArticulationNotation
+  - Music.Score.Export.TechniqueNotation
+  - Music.Score.Export.DynamicNotation
+  - Music.Score.Export.StandardNotation
+  - Music.Score.Import.Abc
+  - Music.Score.Import.Lilypond
+  - Music.Score.Import.Midi
+  - Music.Time.Internal.Convert
+  - Music.Time.Internal.Util
+  - Music.Time.Internal.Transform
+  - Music.Score.Internal.Quantize
+  - Music.Score.Internal.VoiceSeparation
+  - Music.Score.Internal.Instances
+  - Music.Score.Internal.Util
+  - Music.Score.Internal.Export
+  - Music.Time.Internal.Preliminaries
+  - Data.Music.Sibelius
+  - Data.AffineSpace.Point
+  - Music.Score.Import.Sibelius
+  - Music.Prelude
+  - Music.Prelude.Standard
+  - Music.Prelude.Inspectable
+  dependencies:
+  - text
+  - split
+  - comonad
+  - streams
+  - process
+  - filepath
+  - optparse-applicative
+  - average
+  - semigroups
+  - monadplus
+  - transformers
+  - unordered-containers
+  - base-orphans
+  - data-default
+  - file-embed
+  - aeson
+  - roman-numerals
+  - bytestring
+  - cassava
+  - mtl
+  - contravariant
+  - base-prelude
+  - NumInstances
+  - MonadRandom
+  - colour
+  - iso-deriving
+  - logict
+  - parsec
+  - directory
+  - prettify
+  - HCodecs
+  - data-interval
+  - positive
+  - type-unary
+  - xml
+  - neat-interpolation
+  - modular-arithmetic
+  - random-shuffle
+  when:
+  - condition: ! '!(os(windows))'
+    dependencies:
+    - unix
+executables:
+  music-suite-examples-chorale:
+    main: chorale.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-phrases:
+    main: phrases.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-dynamics:
+    main: dynamics.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-piano2:
+    main: piano2.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-chopin:
+    main: chopin.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-chords:
+    main: chords.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-winds-phrasing:
+    main: Score.hs
+    source-dirs: examples/pieces/WindsPhrasing
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-sustain-punctuated:
+    main: Score.hs
+    source-dirs: examples/pieces/SustainPunctuated
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-time-signatures:
+    main: TimeSignatures.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-salient-melodic-transformations:
+    main: Score.hs
+    source-dirs: examples/pieces/SalientMelodicTransformations
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-canon:
+    main: canon.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-ambitus:
+    main: Score.hs
+    source-dirs: examples/pieces/Ambitus
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-fugue1:
+    main: fugue1.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-duo:
+    main: duo.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-klangfarben:
+    main: klangfarben.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-annotations:
+    main: annotations.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-behavior:
+    main: behavior.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-tuplet:
+    main: tuplet.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-harp-string-texture:
+    main: HarpStringTexture.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-bartok:
+    main: bartok.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-piece3:
+    main: Piece3.hs
+    source-dirs: examples/pieces
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-piece8:
+    main: Piece8.hs
+    source-dirs: examples/pieces
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-analysis:
+    main: analysis.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-analysis-durations:
+    main: AnalysisDurations.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-hello:
+    main: hello.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-study-for-harp:
+    main: StudyForHarp.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-mozart:
+    main: mozart.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-part:
+    main: part.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-brass-large-ensemble:
+    main: Score.hs
+    source-dirs: examples/pieces/BrassLargeEnsemble
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-piano1:
+    main: piano1.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+  music-suite-examples-trio:
+    main: trio.hs
+    source-dirs: examples
+    ghc-options: -fno-code
+    dependencies:
+    - music-suite
+tests:
+  music-suite-test-xml-parser:
+    main: MusicXmlParser.hs
+    source-dirs: test
+    dependencies:
+    - bytestring
+    - text
+    - music-suite
+    - tasty
+    - tasty-hunit
+    - directory
+    - filepath
+  music-suite-test-laws:
+    main: Laws.hs
+    source-dirs: test
+    dependencies:
+    - tasty
+    - tasty-golden
+    - tasty-quickcheck-laws
+    - process
+    - average
+    - tasty-quickcheck
+    - QuickCheck
+    - semigroups
+    - comonad
+    - music-suite
+  music-suite-test-umts:
+    main: UMTS.hs
+    source-dirs: test
+    dependencies:
+    - aeson
+    - average
+    - base-orphans
+    - base-prelude
+    - bytestring
+    - cassava
+    - colour
+    - comonad
+    - contravariant
+    - data-default
+    - data-interval
+    - directory
+    - file-embed
+    - filepath
+    - HCodecs
+    - logict
+    - modular-arithmetic
+    - monadplus
+    - MonadRandom
+    - mtl
+    - neat-interpolation
+    - NumInstances
+    - optparse-applicative
+    - parsec
+    - positive
+    - prettify
+    - process
+    - QuickCheck
+    - roman-numerals
+    - semigroups
+    - split
+    - streams
+    - tasty
+    - tasty-golden
+    - tasty-quickcheck
+    - text
+    - transformers
+    - type-unary
+    - unordered-containers
+    - xml
+    - music-suite
