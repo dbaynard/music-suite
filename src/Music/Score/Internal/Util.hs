@@ -54,7 +54,7 @@ where
 
 import Control.Applicative
 import Control.Lens
-import Control.Monad.Plus
+import Control.Monad.Plus hiding (partial)
 import qualified Data.Char
 import qualified Data.List
 import qualified Data.Monoid

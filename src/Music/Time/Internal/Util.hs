@@ -61,7 +61,7 @@ where
 
 import Control.Applicative
 import Control.Lens
-import Control.Monad.Plus
+import Control.Monad.Plus hiding (partial)
 import qualified Data.Char
 import Data.Functor.Contravariant (Equivalence (..), contramap)
 import qualified Data.List
