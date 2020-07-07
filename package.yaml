@@ -9,17 +9,20 @@ license: BSD3
 license-file: COPYING
 git: git://github.com/music-suite/music-suite.git
 tested-with: GHC-any
+
 extra-source-files:
 - README.md
 - examples/*.hs
 - examples/*.scm
 - data/*.ly
+
 dependencies:
 - base
 - lens
 - containers
 - vector-space
 - random
+
 library:
   source-dirs:
   - src
@@ -222,7 +225,9 @@ library:
   - condition: ! '!(os(windows))'
     dependencies:
     - unix
+
 executables:
+
   music-suite-examples-chorale:
     main: chorale.hs
     source-dirs: examples
@@ -409,6 +414,7 @@ executables:
     ghc-options: -fno-code
     dependencies:
     - music-suite
+
 tests:
   music-suite-test-xml-parser:
     main: MusicXmlParser.hs
