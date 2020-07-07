@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 65366b7d0cb78db07650dc6912d12f8d1dca196c5c0a5e02685e040fa8a71ccd
+-- hash: 60084342dd739cdc12d3d2c4b3ac0930a6131147ba6e64f77ba65e00e4ab453e
 
 name:                   music-suite
 version:                2.0.0
@@ -249,8 +249,6 @@ library
 
 executable music-suite-examples-ambitus
     main-is: Score.hs
-    other-modules:
-        Paths_music_suite
     hs-source-dirs:
         examples/pieces/Ambitus
     ghc-options: -fno-code
@@ -265,14 +263,6 @@ executable music-suite-examples-ambitus
 
 executable music-suite-examples-analysis
     main-is: analysis.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -287,13 +277,6 @@ executable music-suite-examples-analysis
 
 executable music-suite-examples-analysis-durations
     main-is: AnalysisDurations.hs
-    other-modules:
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -308,14 +291,6 @@ executable music-suite-examples-analysis-durations
 
 executable music-suite-examples-annotations
     main-is: annotations.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -330,14 +305,6 @@ executable music-suite-examples-annotations
 
 executable music-suite-examples-bartok
     main-is: bartok.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -352,14 +319,6 @@ executable music-suite-examples-bartok
 
 executable music-suite-examples-behavior
     main-is: behavior.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -374,8 +333,6 @@ executable music-suite-examples-behavior
 
 executable music-suite-examples-brass-large-ensemble
     main-is: Score.hs
-    other-modules:
-        Paths_music_suite
     hs-source-dirs:
         examples/pieces/BrassLargeEnsemble
     ghc-options: -fno-code
@@ -390,14 +347,6 @@ executable music-suite-examples-brass-large-ensemble
 
 executable music-suite-examples-canon
     main-is: canon.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -412,14 +361,6 @@ executable music-suite-examples-canon
 
 executable music-suite-examples-chopin
     main-is: chopin.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -434,14 +375,6 @@ executable music-suite-examples-chopin
 
 executable music-suite-examples-chorale
     main-is: chorale.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -456,14 +389,6 @@ executable music-suite-examples-chorale
 
 executable music-suite-examples-chords
     main-is: chords.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -478,14 +403,6 @@ executable music-suite-examples-chords
 
 executable music-suite-examples-duo
     main-is: duo.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -500,14 +417,6 @@ executable music-suite-examples-duo
 
 executable music-suite-examples-dynamics
     main-is: dynamics.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -522,14 +431,6 @@ executable music-suite-examples-dynamics
 
 executable music-suite-examples-fugue1
     main-is: fugue1.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -544,13 +445,6 @@ executable music-suite-examples-fugue1
 
 executable music-suite-examples-harp-string-texture
     main-is: HarpStringTexture.hs
-    other-modules:
-        AnalysisDurations
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -565,14 +459,6 @@ executable music-suite-examples-harp-string-texture
 
 executable music-suite-examples-hello
     main-is: hello.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -587,14 +473,6 @@ executable music-suite-examples-hello
 
 executable music-suite-examples-klangfarben
     main-is: klangfarben.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -609,14 +487,6 @@ executable music-suite-examples-klangfarben
 
 executable music-suite-examples-mozart
     main-is: mozart.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -631,14 +501,6 @@ executable music-suite-examples-mozart
 
 executable music-suite-examples-part
     main-is: part.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -653,14 +515,6 @@ executable music-suite-examples-part
 
 executable music-suite-examples-phrases
     main-is: phrases.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -675,14 +529,6 @@ executable music-suite-examples-phrases
 
 executable music-suite-examples-piano1
     main-is: piano1.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -697,14 +543,6 @@ executable music-suite-examples-piano1
 
 executable music-suite-examples-piano2
     main-is: piano2.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -719,51 +557,6 @@ executable music-suite-examples-piano2
 
 executable music-suite-examples-piece3
     main-is: Piece3.hs
-    other-modules:
-        Ambitus.Score
-        BrassChords.Score
-        BrassLargeEnsemble.Score
-        Canons.Score
-        CrawfordSeeger.Score
-        Exaudi
-        Exaudi2
-        FixedPitches.Score
-        Floaters.Score
-        Fugue.Score
-        HarmonyToTexture.Score
-        HarmonyTriads.Score
-        HarmPhasing.Score
-        Holst.Score
-        LargeScalePolyrhythm.Score
-        Murail
-        Ostinati.Score
-        Piece1
-        Piece10
-        Piece11
-        Piece12
-        Piece2
-        Piece2.BrassFloaters
-        Piece5
-        Piece6
-        Piece7
-        Piece8
-        Piece9
-        PopChords.Score
-        PopRhythms.Score
-        SalientMelodicTransformations.Score
-        SustainPunctuated.Score
-        TreeOfRhythms.Score
-        Util
-        VlaPno.Score
-        WindsPhrasing.Score
-        Z_ChordSpaces.Score
-        Z_ChordToTexture.Score
-        Z_FloatersScales.Score
-        Z_HarmonicElaborations.Score
-        Z_MelodicContour.Score
-        Z_SampleReactive.Score
-        Z_Shepherd.Score
-        Paths_music_suite
     hs-source-dirs:
         examples/pieces
     ghc-options: -fno-code
@@ -778,51 +571,6 @@ executable music-suite-examples-piece3
 
 executable music-suite-examples-piece8
     main-is: Piece8.hs
-    other-modules:
-        Ambitus.Score
-        BrassChords.Score
-        BrassLargeEnsemble.Score
-        Canons.Score
-        CrawfordSeeger.Score
-        Exaudi
-        Exaudi2
-        FixedPitches.Score
-        Floaters.Score
-        Fugue.Score
-        HarmonyToTexture.Score
-        HarmonyTriads.Score
-        HarmPhasing.Score
-        Holst.Score
-        LargeScalePolyrhythm.Score
-        Murail
-        Ostinati.Score
-        Piece1
-        Piece10
-        Piece11
-        Piece12
-        Piece2
-        Piece2.BrassFloaters
-        Piece3
-        Piece5
-        Piece6
-        Piece7
-        Piece9
-        PopChords.Score
-        PopRhythms.Score
-        SalientMelodicTransformations.Score
-        SustainPunctuated.Score
-        TreeOfRhythms.Score
-        Util
-        VlaPno.Score
-        WindsPhrasing.Score
-        Z_ChordSpaces.Score
-        Z_ChordToTexture.Score
-        Z_FloatersScales.Score
-        Z_HarmonicElaborations.Score
-        Z_MelodicContour.Score
-        Z_SampleReactive.Score
-        Z_Shepherd.Score
-        Paths_music_suite
     hs-source-dirs:
         examples/pieces
     ghc-options: -fno-code
@@ -837,8 +585,6 @@ executable music-suite-examples-piece8
 
 executable music-suite-examples-salient-melodic-transformations
     main-is: Score.hs
-    other-modules:
-        Paths_music_suite
     hs-source-dirs:
         examples/pieces/SalientMelodicTransformations
     ghc-options: -fno-code
@@ -853,13 +599,6 @@ executable music-suite-examples-salient-melodic-transformations
 
 executable music-suite-examples-study-for-harp
     main-is: StudyForHarp.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -874,8 +613,6 @@ executable music-suite-examples-study-for-harp
 
 executable music-suite-examples-sustain-punctuated
     main-is: Score.hs
-    other-modules:
-        Paths_music_suite
     hs-source-dirs:
         examples/pieces/SustainPunctuated
     ghc-options: -fno-code
@@ -890,13 +627,6 @@ executable music-suite-examples-sustain-punctuated
 
 executable music-suite-examples-time-signatures
     main-is: TimeSignatures.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -911,14 +641,6 @@ executable music-suite-examples-time-signatures
 
 executable music-suite-examples-trio
     main-is: trio.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -933,14 +655,6 @@ executable music-suite-examples-trio
 
 executable music-suite-examples-tuplet
     main-is: tuplet.hs
-    other-modules:
-        AnalysisDurations
-        HarpStringTexture
-        MenacingBass
-        StudyForHarp
-        TimeSignatures
-        Voicing
-        Paths_music_suite
     hs-source-dirs:
         examples
     ghc-options: -fno-code
@@ -955,8 +669,6 @@ executable music-suite-examples-tuplet
 
 executable music-suite-examples-winds-phrasing
     main-is: Score.hs
-    other-modules:
-        Paths_music_suite
     hs-source-dirs:
         examples/pieces/WindsPhrasing
     ghc-options: -fno-code
