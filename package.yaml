@@ -6,14 +6,12 @@ category: Music
 author: Hans Hoglund
 maintainer: Hans Hoglund <info@hanshoglund.com>
 license: BSD3
-license-file: COPYING
-git: git://github.com/music-suite/music-suite.git
+github: music-suite/music-suite
 tested-with: GHC-any
 
 extra-source-files:
 - README.md
 - examples/*.hs
-- examples/*.scm
 - data/*.ly
 
 dependencies:
@@ -225,6 +223,15 @@ library:
   - condition: ! '!(os(windows))'
     dependencies:
     - unix
+
+executables:
+
+  music2pdf:
+    main: main.hs
+    source-dirs: app/music2pdf
+    other-modules: []
+    dependencies:
+    - music-suite
 
 tests:
   music-suite-test-xml-parser:

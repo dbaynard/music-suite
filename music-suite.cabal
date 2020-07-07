@@ -4,19 +4,20 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0618f1bf8a601ff4251f29a14770b1c7e39e5c54c569502f5f7451e3ba4a1aee
+-- hash: 052fbcd1967579eb137a864c8553c6e2bd6eb7b2003ec0c461bba7e3c55df9e6
 
 name:                   music-suite
 version:                2.0.0
 author:                 Hans Hoglund
 maintainer:             Hans Hoglund <info@hanshoglund.com>
 license:                BSD3
-license-file:           COPYING
+license-file:           LICENSE
 synopsis:               A set of libraries for composition, analysis and manipulation of music.
 category:               Music
+homepage:               https://github.com/music-suite/music-suite#readme
+bug-reports:            https://github.com/music-suite/music-suite/issues
 tested-with:            GHC-any
 build-type:             Simple
-description:            See <http://music-suite.github.io>.
 extra-source-files:
     README.md
     examples/analysis.hs
@@ -53,10 +54,11 @@ extra-source-files:
     data/ly_inline_test1.ly
     data/ly_inline_test2.ly
     data/ly_score.ly
+description:            See <http://music-suite.github.io>.
 
 source-repository head
     type: git
-    location: git://github.com/music-suite/music-suite.git
+    location: https://github.com/music-suite/music-suite
 
 library
     exposed-modules:
@@ -245,6 +247,19 @@ library
     if !(os(windows))
         build-depends:
             unix
+    default-language: Haskell2010
+
+executable music2pdf
+    main-is: main.hs
+    hs-source-dirs:
+        app/music2pdf
+    build-depends:
+        base,
+        containers,
+        lens,
+        music-suite,
+        random,
+        vector-space
     default-language: Haskell2010
 
 test-suite music-suite-test-laws
