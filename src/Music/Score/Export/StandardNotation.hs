@@ -288,6 +288,7 @@ import Music.Score.Ties (TieT (..))
 import Music.Score.Tremolo (TremoloT, runTremoloT)
 import Music.Time
 import Music.Time.Meta (meta)
+import System.IO (hPutStrLn, stderr)
 
 -- Annotated tree
 data LabelTree b a = Branch b [LabelTree b a] | Leaf a
@@ -932,7 +933,7 @@ instance MonadError String IOExportM where
   catchError = error "MonadError String IOExportM: catchError: No implementation"
 
 instance MonadLog String IOExportM where
-  say x = liftIO $ putStrLn $ "  " ++ x
+  say x = liftIO $ hPutStrLn stderr $ "  " ++ x
 
 runIOExportM :: IOExportM a -> IO a
 runIOExportM = runIOExportM_

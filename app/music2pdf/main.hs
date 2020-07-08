@@ -2,4 +2,5 @@ module Main where
 
 import Music.Prelude
 
-main = defaultMain undefined
+main :: IO ()
+main = lilyOut $ c |> d |> e

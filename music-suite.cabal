@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 052fbcd1967579eb137a864c8553c6e2bd6eb7b2003ec0c461bba7e3c55df9e6
+-- hash: 1186046a4bdea81edd54107c5e97bf769580a3dd300c0bd381ac0c79b2de93a4
 
 name:                   music-suite
 version:                2.0.0
@@ -249,7 +249,7 @@ library
             unix
     default-language: Haskell2010
 
-executable music2pdf
+executable lily
     main-is: main.hs
     hs-source-dirs:
         app/music2pdf
@@ -258,6 +258,7 @@ executable music2pdf
         containers,
         lens,
         music-suite,
+        prettify,
         random,
         vector-space
     default-language: Haskell2010

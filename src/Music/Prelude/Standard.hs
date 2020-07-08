@@ -37,6 +37,9 @@ module Music.Prelude.Standard
     Asp1a,
     defaultMain,
 
+    -- * Export
+    lilyOut,
+
     -- * Lens re-exports
     set,
     over,
@@ -173,3 +176,12 @@ doublePartsF ps x = mconcat $ fmap (\p -> set (mapped . parts') p x) ps
 -- >>> doublePartsInOctave [(violins,0),(flutes,1)] $ pseq[c,d,e]
 doublePartsInOctave :: (Monoid a, Transposable a, HasParts' a) => [(Music.Score.Part.Part a, Int)] -> a -> a
 doublePartsInOctave ps x = mconcat $ fmap (\(p, n) -> set parts' p $ octavesUp (fromIntegral n) x) ps
+
+-- | Output lilypond format on stdout
+lilyOut :: Music -> IO ()
+lilyOut music = do
+  work <- runIOExportM $ toStandardNotation music
+  (h, ly) <- runIOExportM $ toLy defaultLilypondOptions work
+  let ly' = h ++ show (Text.Pretty.pretty ly)
+  -- TODO use ByteString/builders, not String?
+  putStrLn ly'

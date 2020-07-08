@@ -226,12 +226,13 @@ library:
 
 executables:
 
-  music2pdf:
+  lily:
     main: main.hs
     source-dirs: app/music2pdf
     other-modules: []
     dependencies:
     - music-suite
+    - prettify
 
 tests:
   music-suite-test-xml-parser:
